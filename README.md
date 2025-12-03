@@ -26,9 +26,9 @@ A UI with these functionalities
 **Output (What we get):**
 * **A Downloadable ZIP File containing:**
     * 3+ High-resolution marketing images (Product perfectly placed in AI-generated scenes).
+    * A text file containing matching AI-generated ad copy (Captions & Hashtags).
 > [!Note]
 > Limited to 5 currently due to credit limits, but can be extended by small modifications in code, just by increasing 'for' loop limit. But remember to use a api key which have higher limits.
-    * A text file containing matching AI-generated ad copy (Captions & Hashtags).
 
 ---
 
