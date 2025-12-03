@@ -73,7 +73,7 @@ Please Check the Screenshot and Output folder
 ## 7. How to Reproduce
 
 Follow these steps to run the application locally:<br>
-1. **Create a Virtual Environment:** I recommend doing so to avoid inconsistencies between different library versions. Use the command `conda create -n meet_env python=3.10.18` to create a virtual env and use `conda activate meet_env` to activate it.
+1. **Create a Virtual Environment:** I recommend doing so to avoid inconsistencies between different library versions. Use the command `pip create -n hackathon python=3.10.18` to create a virtual env and use `pip activate hackathon` to activate it.
 2. **Clone the repository:** Use  `git clone _link_` to clone it to your local machine. Move to the repo's directory.
-3. **Install all Dependencies:** Use `conda install -r requirements.txt` to install libraries. And set the .env file accordingly.
+3. **Install all Dependencies:** Use `pip install -r requirements.txt` to install libraries. And set the .env file accordingly.
 4. **Run the Streamlit App:** Use `Streamlit run app.py` to run the app.
