@@ -12,12 +12,14 @@
 
 ---
 
-## 2. Input & Output
+## 2. Expected End Result
 
 **Input (What we give):**
 * **Product Image:** A transparent PNG of the product.
 * **Brand Logo:** A transparent PNG of the company logo.
 * **Product Description:** A short text string describing the product (e.g., "A futuristic energy drink").
+
+**Action: Wait a while, processing in background, approximately 1 min**
 
 **Output (What we get):**
 * **A Downloadable ZIP File containing:**
@@ -47,7 +49,24 @@ We moved beyond simple "text-to-image" generation, which often hallucinates logo
 
 ---
 
-## 5. How to Reproduce
+## 5. Challenges & Learnings
+
+**Challenge 1: Generative Hallucinations (The "Text Problem")**
+* **Issue:** Initially, we tried asking the Image AI to "Generate a can of soda with the Brand X logo." The results were disastrous—the AI consistently misspelled the brand name and distorted the logo.
+* **Solution:** We pivoted to a **Composite Architecture**. We treat the AI strictly as a "Background Generator" and use deterministic Python code (`Pillow`) to overlay the actual high-res product assets. This guarantees 100% brand accuracy.
+
+**Challenge 2: Managing API Latency**
+* **Issue:** Calling two different AI models (Gemini for text, Stability for images) sequentially caused the UI to freeze, making the app feel broken.
+* **Solution:** We implemented Streamlit's `st.status` and progress bars to give the user real-time feedback on exactly which step (Brainstorming -> Rendering -> Compositing) was happening at any given second.
+
+---
+
+## 6. Visual Proof
+Please Check the Screenshot and Output folder
+
+---
+
+## 7. How to Reproduce
 
 Follow these steps to run the application locally:<br>
 1. **Create a Virtual Environment:** I recommend doing so to avoid inconsistencies between different library versions. Use the command `conda create -n meet_env python=3.10.18` to create a virtual env and use `conda activate meet_env` to activate it.
