@@ -49,9 +49,8 @@ We moved beyond simple "text-to-image" generation, which often hallucinates logo
 
 ## 5. How to Reproduce
 
-Follow these steps to run the application locally:
-
-**Step 1: Clone the Repository**
-```bash
-git clone [https://github.com/your-username/ai-creative-studio.git](https://github.com/your-username/ai-creative-studio.git)
-cd ai-creative-studio
+Follow these steps to run the application locally:<br>
+1. **Create a Virtual Environment:** I recommend doing so to avoid inconsistencies between different library versions. Use the command `conda create -n meet_env python=3.10.18` to create a virtual env and use `conda activate meet_env` to activate it.
+2. **Clone the repository:** Use  `git clone _link_` to clone it to your local machine. Move to the repo's directory.
+3. **Install all Dependencies:** Use `conda install -r requirements.txt` to install libraries. Also, manually download the 'punkt' module of nltk using `nltk.download('punkt')`
+4. **Run the Streamlit App:** Use `Streamlit run app.py` to run the app.
