@@ -14,6 +14,8 @@
 
 ## 2. Expected End Result
 
+A UI with these functionalities
+
 **Input (What we give):**
 * **Product Image:** A transparent PNG of the product.
 * **Brand Logo:** A transparent PNG of the company logo.
@@ -24,6 +26,8 @@
 **Output (What we get):**
 * **A Downloadable ZIP File containing:**
     * 3+ High-resolution marketing images (Product perfectly placed in AI-generated scenes).
+> [!Note]
+> Limited to 5 currently due to credit limits, but can be extended by small modifications in code, just by increasing 'for' loop limit. But remember to use a api key which have higher limits.
     * A text file containing matching AI-generated ad copy (Captions & Hashtags).
 
 ---
@@ -45,7 +49,7 @@ We moved beyond simple "text-to-image" generation, which often hallucinates logo
 * **Frontend:** Streamlit
 * **Image Processing:** Pillow (PIL)
 * **GenAI (Text):** Google Gemini API
-* **GenAI (Image):** Stability AI API (Stable Diffusion)
+* **GenAI (Image):** Stability AI API (Stable Diffusion Medium)
 
 ---
 
@@ -71,5 +75,5 @@ Please Check the Screenshot and Output folder
 Follow these steps to run the application locally:<br>
 1. **Create a Virtual Environment:** I recommend doing so to avoid inconsistencies between different library versions. Use the command `conda create -n meet_env python=3.10.18` to create a virtual env and use `conda activate meet_env` to activate it.
 2. **Clone the repository:** Use  `git clone _link_` to clone it to your local machine. Move to the repo's directory.
-3. **Install all Dependencies:** Use `conda install -r requirements.txt` to install libraries. Also, manually download the 'punkt' module of nltk using `nltk.download('punkt')`
+3. **Install all Dependencies:** Use `conda install -r requirements.txt` to install libraries. And set the .env file accordingly.
 4. **Run the Streamlit App:** Use `Streamlit run app.py` to run the app.
